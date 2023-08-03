@@ -1,0 +1,23 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: debug
+server:
+    port: 8091
+spring:
+    config:
+        activate:
+            on-profile: prod
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password:
+        url: jdbc:mysql://localhost/db_springboot_prod?useSSL=false
+        username: root
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL8Dialect
+springdoc:
+    api-docs:
+        path: /api-docs
+    swagger-ui:
+        path: /swagger-ui-custom.html
